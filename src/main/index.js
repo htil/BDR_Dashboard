@@ -61,7 +61,7 @@ async function createWindow() {
     // before the DOM is ready
     win.webContents.once("dom-ready", async () => {
       require("electron-debug")(); // https://github.com/sindresorhus/electron-debug
-      win.webContents.openDevTools();
+      // win.webContents.openDevTools();
     });
   }
 
