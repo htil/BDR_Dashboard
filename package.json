@@ -1,7 +1,7 @@
 {
   "name": "electron-vuejs-parcel",
-  "description": "Neuroblock 3",
-  "version": "1.0.16",
+  "description": "BDR Dashboard is a desktop application for the BDR project. It is built using Electron, Vue.js, and Parcel.",
+  "version": "1.3.0",
   "author": {
     "name": "Human Technology Interaction Lab"
   },
@@ -56,7 +56,7 @@
   "main": "./src/main/index.js",
   "build": {
     "appId": "com.electron.electron-vuejs-parcel",
-    "productName": "MyApp",
+    "productName": "BDR Dashboard",
     "compression": "maximum",
     "files": [
       "src/main/**/*",
@@ -70,6 +70,9 @@
       "icon": "src/renderer/icons/icon.icns",
       "category": "public.app-category.productivity",
       "identity": null
+    },
+    "win": {
+      "icon": "src/renderer/icons/icon.png"
     },
     "dmg": {
       "contents": [

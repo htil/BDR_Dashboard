@@ -66,4 +66,9 @@ module.exports.land = () => tello.land();
 module.exports.getState = () => tello.getState();
 module.exports.up = (value) => tello.send_message("up " + value);
 module.exports.down = (value) => tello.send_message("down " + value);
+module.exports.forward = (value) => tello.send_message("forward " + value);
+module.exports.cw = (value) => tello.send_message("cw " + value);
+module.exports.ccw = (value) => tello.send_message("ccw " + value);
+module.exports.back = (value) => tello.send_message("back " + value);
+
 console.log("Tello");

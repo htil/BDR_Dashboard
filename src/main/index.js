@@ -139,6 +139,35 @@ async function createWindow() {
     tello.down(downVal);
   });
 
+  ipcMain.on("drone-forward", (event, response) => {
+    let recent_val = parseInt(response);
+    _maxSpeed = 80;
+    let val = recent_val > _maxSpeed ? _maxSpeed : recent_val < minSpeed ? minSpeed : recent_val;
+    console.log("drone forward", val, "sent", response);
+    tello.forward(val);
+  });
+
+  ipcMain.on("drone-back", (event, response) => {
+    let recent_val = parseInt(response);
+    let val = recent_val > maxSpeed ? maxSpeed : recent_val < minSpeed ? minSpeed : recent_val;
+    console.log("drone back", val, "sent", response);
+    tello.back(val);
+  });
+
+  ipcMain.on("cw", (event, response) => {
+    let recent_val = parseInt(response);
+    //let val = recent_val > maxSpeed ? maxSpeed : recent_val < minSpeed ? minSpeed : recent_val;
+    console.log("cw", recent_val, "sent", response);
+    tello.cw(recent_val);
+  });
+
+  ipcMain.on("ccw", (event, response) => {
+    let recent_val = parseInt(response);
+    //let val = recent_val > maxSpeed ? maxSpeed : recent_val < minSpeed ? minSpeed : recent_val;
+    console.log("ccw", recent_val, "sent", response);
+    tello.ccw(recent_val);
+  });
+
   let isUp = false;
 
   ipcMain.on("manual-control", (event, response) => {

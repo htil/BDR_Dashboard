@@ -13,6 +13,10 @@ export const InterpreterAPI = class {
       blockly_print: this.wrapperFunctions.blockly_print,
       drone_up: this.wrapperFunctions.drone_up,
       drone_down: this.wrapperFunctions.drone_down,
+      drone_forward: this.wrapperFunctions.drone_forward,
+      drone_back: this.wrapperFunctions.drone_back,
+      ccw: this.wrapperFunctions.ccw,
+      cw: this.wrapperFunctions.cw,
       takeoff: this.wrapperFunctions.takeoff,
       land: this.wrapperFunctions.land
     };
